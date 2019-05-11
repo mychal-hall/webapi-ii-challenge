@@ -57,14 +57,14 @@ Configure the API to handle to the following routes:
 
 | Method | Endpoint       | Description                                                                                                                                                                 |
 | ------ | -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| POST   | /api/posts     | Creates a post using the information sent inside the `request body`.                                                                                                        |
-| GET    | /api/posts     | Returns an array of all the post objects contained in the database.                                                                                                         |
-| GET    | /api/posts/:id | Returns the post object with the specified id.                                                                                                                              |
+<!-- | POST   | /api/posts     | Creates a post using the information sent inside the `request body`.                                                                                                        | -->
+<!-- | GET    | /api/posts     | Returns an array of all the post objects contained in the database.                                                                                                         | -->
+<!-- | GET    | /api/posts/:id | Returns the post object with the specified id.                                                                                                                              | -->
 | DELETE | /api/posts/:id | Removes the post with the specified id and returns the **deleted post object**. You may need to make additional calls to the database in order to satisfy this requirement. |
 | PUT    | /api/posts/:id | Updates the post with the specified `id` using data from the `request body`. Returns the modified document, **NOT the original**.                                           |
 
 #### Endpoint Specifications
-
+<!-- 
 When the client makes a `POST` request to `/api/posts`:
 
 - If the request body is missing the `title` or `contents` property:
@@ -82,9 +82,9 @@ When the client makes a `POST` request to `/api/posts`:
 - If there's an error while saving the _post_:
   - cancel the request.
   - respond with HTTP status code `500` (Server Error).
-  - return the following JSON object: `{ error: "There was an error while saving the post to the database" }`.
+  - return the following JSON object: `{ error: "There was an error while saving the post to the database" }`. -->
 
-When the client makes a `GET` request to `/api/posts`:
+<!-- When the client makes a `GET` request to `/api/posts`:
 
 - If there's an error in retrieving the _posts_ from the database:
   - cancel the request.
@@ -101,7 +101,7 @@ When the client makes a `GET` request to `/api/posts/:id`:
 - If there's an error in retrieving the _post_ from the database:
   - cancel the request.
   - respond with HTTP status code `500`.
-  - return the following JSON object: `{ error: "The post information could not be retrieved." }`.
+  - return the following JSON object: `{ error: "The post information could not be retrieved." }`. -->
 
 When the client makes a `DELETE` request to `/api/posts/:id`:
 
